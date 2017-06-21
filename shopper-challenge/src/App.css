@@ -13,9 +13,13 @@ h4 {
 }
 
 .form-container {
-  background-color: white !important;
+  background-color: white;
   text-align: center;
-  margin: 15px 15%;
+  position:relative; 
+  width:33%; 
+  min-width:500px;
+  margin: 0 auto;
+
 }
 
 .paragraph-container {

@@ -11,85 +11,74 @@ Checkbox,
 class InputForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      cellPhoneNumber: '',
+      zipCode: '',
+      referralCode: '',
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChange(targetStateProp, event) {
+    this.setState({[targetStateProp]: event.target.value});
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    console.log(this.state);
     event.preventDefault();
   }
 
   render() {
     return (
       <div className="form-container">
-        <div id='parent_div_1' md={4} smOffset={4}>
-          <h2>Earn money shopping and delivering groceries, giving customers more time to do what they love.</h2>
-          <h4 >
-            <i className="fa fa-clock-o fa-2x"></i>
-            &nbsp; Be Independent
-          </h4>
-          <p className="paragraph-container" >Schedule work around your own life.</p>
-          <h4 >
-            <i className="fa fa-smile-o fa-2x"></i> 
-            &nbsp; Have Fun
-          </h4>
-          <p className="paragraph-container" >Spend time shopping, exploring new things and being active.</p>
-          <h4 >
-            <i className="fa fa-money fa-2x"></i>
-            &nbsp; Earn extra income
-          </h4>
-          <p className="paragraph-container" >Get paid weekly. Work Sundays to maximize your hours and pay</p>
 
-        </div>
-
-        <div id='parent_div_2' md={4} smOffset={4}>
+        <div id='parent_div_2' md={4} smOffset={4}> 
           <h2>Apply in under 5 minutes</h2>
-          <Form horizontal>
+
+          <Form horizontal onSubmit={this.handleSubmit.bind(this)}>
+
             <FormGroup controlId="formHorizontalEmail">
               <Col sm={10} smOffset={1} >
-                <FormControl type="email" placeholder="First Name" />
+                <FormControl onChange={this.handleChange.bind(this, 'firstName')} value={this.state.firstName} type="text" placeholder="First Name" />
               </Col>
             </FormGroup>
 
             <FormGroup controlId="formHorizontalEmail">
               <Col sm={10} smOffset={1}>
-                <FormControl type="email" placeholder="Last Name" />
+                <FormControl onChange={this.handleChange.bind(this, 'lastName')} value={this.state.lastName} type="text" placeholder="Last Name" />
               </Col>
             </FormGroup>
 
             <FormGroup controlId="formHorizontalEmail">
               <Col sm={10} smOffset={1}>
-                <FormControl type="email" placeholder="Email" />
+                <FormControl onChange={this.handleChange.bind(this, 'email')} value={this.state.Email} type="email" placeholder="Email" />
               </Col>
             </FormGroup>
 
             <FormGroup controlId="formHorizontalPassword">
               <Col sm={10} smOffset={1}>
-                <FormControl type="password" placeholder="Cell Phone Number" />
+                <FormControl onChange={this.handleChange.bind(this, 'cellPhoneNumber')} value={this.state.cellPhoneNumber} type="text" placeholder="Cell Phone Number" />
               </Col>
             </FormGroup>
 
             <FormGroup controlId="formHorizontalPassword">
               <Col sm={10} smOffset={1}>
-                <FormControl type="password" placeholder="Zip code" />
+                <FormControl onChange={this.handleChange.bind(this, 'zipCode')} value={this.state.zipCode} type="text" placeholder="Zip code" />
               </Col>
             </FormGroup>
 
             <FormGroup controlId="formHorizontalPassword">
               <Col sm={10} smOffset={1}>
-                <FormControl type="password" placeholder="Referral Code (optional)" />
+                <FormControl onChange={this.handleChange.bind(this, 'referralCode')} value={this.state.referralCode} type="text" placeholder="Referral Code (optional)" />
               </Col>
             </FormGroup>
 
             <FormGroup>
               <Col sm={10} smOffset={1}>
-                <Button bsStyle="success" bsSize="large" block>Continue &nbsp; > </Button>
+                <Button type="submit" bsStyle="success" bsSize="large" block >Continue &nbsp; > </Button>
               </Col>
             </FormGroup>
           </Form>
