@@ -4,7 +4,7 @@ Button,
 Form,          
 FormGroup,     
 Col,           
-ControlLabel,           
+           
 FormControl,                                                 
 Checkbox,                      
 } from 'react-bootstrap';
@@ -31,48 +31,36 @@ class InputForm extends React.Component {
       <div className="col-md-2 col-md-offset-5">
         <Form horizontal>
           <FormGroup controlId="formHorizontalEmail">
-            <Col componentClass={ControlLabel} sm={2}>
-            </Col>
             <Col sm={10}>
               <FormControl type="email" placeholder="First Name" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalEmail">
-            <Col componentClass={ControlLabel} sm={2}>
-            </Col>
             <Col sm={10}>
               <FormControl type="email" placeholder="Last Name" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalEmail">
-            <Col componentClass={ControlLabel} sm={2}>
-            </Col>
             <Col sm={10}>
               <FormControl type="email" placeholder="Email" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col componentClass={ControlLabel} sm={2}>
-            </Col>
             <Col sm={10}>
               <FormControl type="password" placeholder="Cell Phone Number" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col componentClass={ControlLabel} sm={2}>
-            </Col>
             <Col sm={10}>
               <FormControl type="password" placeholder="Zip code" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col componentClass={ControlLabel} sm={2}>
-            </Col>
             <Col sm={10}>
               <FormControl type="password" placeholder="Referral Code (optional)" />
             </Col>
