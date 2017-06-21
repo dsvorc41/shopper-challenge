@@ -18,8 +18,11 @@ h4 {
   position:relative; 
   width:33%; 
   min-width:500px;
-  margin: 0 auto;
+  margin: 10px auto;
 
+}
+.text-left {
+  text-align: left;
 }
 
 .paragraph-container {
