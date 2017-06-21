@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+import qs from 'qs';
 
 import { 
 Button, 
@@ -35,8 +37,15 @@ class InputForm extends React.Component {
   }
 
   handleSubmit(typeOfEvent, event) {
-    console.log(this.state);
+   
     event.preventDefault();
+    axios({
+      method: 'post',
+      url: 'http://localhost:3001/postUserData', 
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      data: qs.stringify(this.state)
+    })
+    .then((data)=> {console.log(data)});
   }
 
   render() {
