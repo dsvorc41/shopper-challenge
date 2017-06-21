@@ -28,59 +28,52 @@ class InputForm extends React.Component {
 
   render() {
     return (
-      <div className="col-md-2 col-md-offset-5">
+      <div className="col-md-4 col-md-offset-4 form-container">
+        <h2>Apply in under 5 minutes</h2>
         <Form horizontal>
           <FormGroup controlId="formHorizontalEmail">
-            <Col sm={10}>
+            <Col sm={10} smOffset={1} >
               <FormControl type="email" placeholder="First Name" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalEmail">
-            <Col sm={10}>
+            <Col sm={10} smOffset={1}>
               <FormControl type="email" placeholder="Last Name" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalEmail">
-            <Col sm={10}>
+            <Col sm={10} smOffset={1}>
               <FormControl type="email" placeholder="Email" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col sm={10}>
+            <Col sm={10} smOffset={1}>
               <FormControl type="password" placeholder="Cell Phone Number" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col sm={10}>
+            <Col sm={10} smOffset={1}>
               <FormControl type="password" placeholder="Zip code" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col sm={10}>
+            <Col sm={10} smOffset={1}>
               <FormControl type="password" placeholder="Referral Code (optional)" />
             </Col>
           </FormGroup>
 
           <FormGroup>
-            <Col smOffset={2} sm={10}>
-              <Checkbox>Remember me</Checkbox>
-            </Col>
-          </FormGroup>
-
-          <FormGroup>
-            <Col smOffset={2} sm={10}>
-              <Button type="submit">
-                Sign in
-              </Button>
+            <Col sm={10} smOffset={1}>
+              <Button bsStyle="success" bsSize="large" block>Continue &nbsp; > </Button>
             </Col>
           </FormGroup>
         </Form>
-        <p>We will use this information to communicate with you about your application.</p>
+        <p className="paragraph-container" >We will use this information to communicate with you about your application.</p>
       </div>
     );
   }

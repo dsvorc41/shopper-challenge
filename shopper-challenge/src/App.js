@@ -23,7 +23,7 @@ class App extends Component {
             <img src={logo} className="App-logo" width="150" height="30"/>
           </div>
         </div>
-        <InputForm />
+        <InputForm/>
       </div>
     );
   }
