@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+
 import { 
 Button, 
 Form,          
@@ -8,6 +10,12 @@ FormControl,
 Checkbox,                      
 } from 'react-bootstrap';
 
+let styles = {
+  buttons: {
+    color: 'white',  
+    'text-decoration': 'none' 
+  }
+}
 class InputForm extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +34,7 @@ class InputForm extends React.Component {
     this.setState({[targetStateProp]: event.target.value});
   }
 
-  handleSubmit(event) {
+  handleSubmit(typeOfEvent, event) {
     console.log(this.state);
     event.preventDefault();
   }
@@ -36,8 +44,8 @@ class InputForm extends React.Component {
       <div className="form-container">
 
         <div id='parent_div_2' md={4} smOffset={4}> 
-          <h2>Apply in under 5 minutes</h2>
-
+          <h2>{this.props.title}</h2>
+          <p>{this.props.firstParagraph}</p>
           <Form horizontal onSubmit={this.handleSubmit.bind(this)}>
 
             <FormGroup controlId="formHorizontalEmail">
@@ -75,14 +83,16 @@ class InputForm extends React.Component {
                 <FormControl onChange={this.handleChange.bind(this, 'referralCode')} value={this.state.referralCode} type="text" placeholder="Referral Code (optional)" />
               </Col>
             </FormGroup>
-
-            <FormGroup>
-              <Col sm={10} smOffset={1}>
-                <Button type="submit" bsStyle="success" bsSize="large" block >Continue &nbsp; > </Button>
-              </Col>
-            </FormGroup>
           </Form>
-          <p className="paragraph-container" >We will use this information to communicate with you about your application.</p>
+
+          <Col sm={10} smOffset={1}>
+            <Button onClick={this.handleSubmit.bind(this, 'disagree')} bsStyle="success" bsSize="large" block >
+              <Link to='/backgroundCheck' style={styles.buttons}>{this.props.buttonText}</Link>
+            </Button>
+          </Col>
+          <Col sm={10} smOffset={1}>
+            <p className="paragraph-container" >We will use this information to communicate with you about your application.</p>
+          </Col>
         </div>
       </div>
     );
