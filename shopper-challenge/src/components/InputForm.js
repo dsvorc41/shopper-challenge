@@ -3,8 +3,7 @@ import {
 Button, 
 Form,          
 FormGroup,     
-Col,           
-           
+Col,                  
 FormControl,                                                 
 Checkbox,                      
 } from 'react-bootstrap';
@@ -28,52 +27,74 @@ class InputForm extends React.Component {
 
   render() {
     return (
-      <div className="col-md-4 col-md-offset-4 form-container">
-        <h2>Apply in under 5 minutes</h2>
-        <Form horizontal>
-          <FormGroup controlId="formHorizontalEmail">
-            <Col sm={10} smOffset={1} >
-              <FormControl type="email" placeholder="First Name" />
-            </Col>
-          </FormGroup>
+      <div className="form-container">
+        <div id='parent_div_1' md={4} smOffset={4}>
+          <h2>Earn money shopping and delivering groceries, giving customers more time to do what they love.</h2>
+          <p className="paragraph-container" >
+            <i className="fa fa-clock-o fa-5x"></i>
+            Be Independent
+          </p>
+          <p className="paragraph-container" >Schedule work around your own life.</p>
+          <p className="paragraph-container" >
+            <i className="fa fa-smile-o fa-5x"></i> 
+            Have Fun
+          </p>
+          <p className="paragraph-container" >Spend time shopping, exploring new things and being active.</p>
+          <p className="paragraph-container" >
+            <i className="fa fa-money fa-5x"></i>
+            Earn extra income
+          </p>
+          <p className="paragraph-container" >Get paid weekly. Work Sundays to maximize your hours and pay</p>
 
-          <FormGroup controlId="formHorizontalEmail">
-            <Col sm={10} smOffset={1}>
-              <FormControl type="email" placeholder="Last Name" />
-            </Col>
-          </FormGroup>
+        </div>
 
-          <FormGroup controlId="formHorizontalEmail">
-            <Col sm={10} smOffset={1}>
-              <FormControl type="email" placeholder="Email" />
-            </Col>
-          </FormGroup>
+        <div id='parent_div_2' md={4} smOffset={4}>
+          <h2>Apply in under 5 minutes</h2>
+          <Form horizontal>
+            <FormGroup controlId="formHorizontalEmail">
+              <Col sm={10} smOffset={1} >
+                <FormControl type="email" placeholder="First Name" />
+              </Col>
+            </FormGroup>
 
-          <FormGroup controlId="formHorizontalPassword">
-            <Col sm={10} smOffset={1}>
-              <FormControl type="password" placeholder="Cell Phone Number" />
-            </Col>
-          </FormGroup>
+            <FormGroup controlId="formHorizontalEmail">
+              <Col sm={10} smOffset={1}>
+                <FormControl type="email" placeholder="Last Name" />
+              </Col>
+            </FormGroup>
 
-          <FormGroup controlId="formHorizontalPassword">
-            <Col sm={10} smOffset={1}>
-              <FormControl type="password" placeholder="Zip code" />
-            </Col>
-          </FormGroup>
+            <FormGroup controlId="formHorizontalEmail">
+              <Col sm={10} smOffset={1}>
+                <FormControl type="email" placeholder="Email" />
+              </Col>
+            </FormGroup>
 
-          <FormGroup controlId="formHorizontalPassword">
-            <Col sm={10} smOffset={1}>
-              <FormControl type="password" placeholder="Referral Code (optional)" />
-            </Col>
-          </FormGroup>
+            <FormGroup controlId="formHorizontalPassword">
+              <Col sm={10} smOffset={1}>
+                <FormControl type="password" placeholder="Cell Phone Number" />
+              </Col>
+            </FormGroup>
 
-          <FormGroup>
-            <Col sm={10} smOffset={1}>
-              <Button bsStyle="success" bsSize="large" block>Continue &nbsp; > </Button>
-            </Col>
-          </FormGroup>
-        </Form>
-        <p className="paragraph-container" >We will use this information to communicate with you about your application.</p>
+            <FormGroup controlId="formHorizontalPassword">
+              <Col sm={10} smOffset={1}>
+                <FormControl type="password" placeholder="Zip code" />
+              </Col>
+            </FormGroup>
+
+            <FormGroup controlId="formHorizontalPassword">
+              <Col sm={10} smOffset={1}>
+                <FormControl type="password" placeholder="Referral Code (optional)" />
+              </Col>
+            </FormGroup>
+
+            <FormGroup>
+              <Col sm={10} smOffset={1}>
+                <Button bsStyle="success" bsSize="large" block>Continue &nbsp; > </Button>
+              </Col>
+            </FormGroup>
+          </Form>
+          <p className="paragraph-container" >We will use this information to communicate with you about your application.</p>
+        </div>
       </div>
     );
   }

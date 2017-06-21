@@ -10,6 +10,8 @@ h2 {
 
 .form-container {
   background-color: white !important;
+  text-align: center;
+  margin: 15px 15%;
 }
 
 .paragraph-container {
@@ -28,3 +30,16 @@ h2 {
   font-size: large;
 }
 
+#parent_div_1, #parent_div_2 {
+  display:inline-block;
+  width: 500px;
+}
+
+.child_div_1{
+  float:left;
+  margin-right:5px;
+}
+
+.left-title {
+  width: 100%;
+}
