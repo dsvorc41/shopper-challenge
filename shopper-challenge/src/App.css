@@ -2,6 +2,10 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+h4 {
+  text-align: left;
+  margin-left: 20px;
+}
 .image-container {
   padding: 20px 0 0 20px;
   height: 70px;
@@ -16,7 +20,7 @@ h2 {
 
 .paragraph-container {
   text-align: left;
-  margin-left: 30px;
+  margin-left: 60px;
 }
 
 .App-header {

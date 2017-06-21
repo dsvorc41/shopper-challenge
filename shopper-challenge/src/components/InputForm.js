@@ -30,20 +30,20 @@ class InputForm extends React.Component {
       <div className="form-container">
         <div id='parent_div_1' md={4} smOffset={4}>
           <h2>Earn money shopping and delivering groceries, giving customers more time to do what they love.</h2>
-          <p className="paragraph-container" >
-            <i className="fa fa-clock-o fa-5x"></i>
-            Be Independent
-          </p>
+          <h4 >
+            <i className="fa fa-clock-o fa-2x"></i>
+            &nbsp; Be Independent
+          </h4>
           <p className="paragraph-container" >Schedule work around your own life.</p>
-          <p className="paragraph-container" >
-            <i className="fa fa-smile-o fa-5x"></i> 
-            Have Fun
-          </p>
+          <h4 >
+            <i className="fa fa-smile-o fa-2x"></i> 
+            &nbsp; Have Fun
+          </h4>
           <p className="paragraph-container" >Spend time shopping, exploring new things and being active.</p>
-          <p className="paragraph-container" >
-            <i className="fa fa-money fa-5x"></i>
-            Earn extra income
-          </p>
+          <h4 >
+            <i className="fa fa-money fa-2x"></i>
+            &nbsp; Earn extra income
+          </h4>
           <p className="paragraph-container" >Get paid weekly. Work Sundays to maximize your hours and pay</p>
 
         </div>
