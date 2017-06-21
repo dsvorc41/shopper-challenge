@@ -19,6 +19,17 @@ let styles = {
   }
 }
 class InputForm extends React.Component {
+  componentWillMount(){
+    axios.get({
+      method: 'get',
+      url: 'http://localhost:3001/userSession', 
+    })
+    .then((data)=> {
+      if (data.user.email) {
+        console.log(data)
+      }
+    });
+  }
   constructor(props) {
     super(props);
     this.state = {
